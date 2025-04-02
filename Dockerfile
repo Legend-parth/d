@@ -1,7 +1,7 @@
 FROM docker:dind
 
-# Install curl
-RUN apt-get update && apt-get install -y curl
+# Install curl using apk
+RUN apk update && apk add curl
 
 # Install sshx.io
 RUN curl -sSf https://sshx.io/get | sh -s run
